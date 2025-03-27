@@ -2,7 +2,7 @@ import express from 'express';
 import { greet } from '../services/service1.js';
 import { add } from '../services/service2.js';
 import { multiply } from '../services/service3.js';
-
+//hello
 const app = express();
 
 app.get('/greet/:name', (req, res) => {
@@ -24,4 +24,4 @@ const server = app.listen(PORT, () => {
   console.log(`Big service running on http://localhost:${PORT}`);
 });
 
-export { app, server };  // ✅ Correct way to export
+export { app, server };  
