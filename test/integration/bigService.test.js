@@ -1,5 +1,9 @@
 import request from 'supertest';
-import app from '../../big-service/index.js';
+import { app, server } from '../../big-service/index.js';
+
+afterAll(() => {
+  server.close(); // ✅ Ensures Jest exits cleanly
+});
 
 test('GET /greet/Alice', async () => {
   const res = await request(app).get('/greet/Alice');

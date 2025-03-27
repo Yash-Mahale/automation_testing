@@ -20,8 +20,8 @@ app.get('/multiply/:a/:b', (req, res) => {
 });
 
 const PORT = 3000;
-app.listen(PORT, () => {
+const server = app.listen(PORT, () => {
   console.log(`Big service running on http://localhost:${PORT}`);
 });
 
-export default app;
+export { app, server };  // ✅ Correct way to export
